@@ -1,7 +1,7 @@
 % Analyse models
 % Related to Fig 2BC
 
-% cd ../../../GitHub/cobratoolbox;
+% cd ../cobratoolbox;
 % initCobraToolbox;
 
 addpath('Functions/');

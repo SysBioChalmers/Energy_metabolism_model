@@ -4,7 +4,7 @@
 
 % Data from (PMID: 25304508 27135538)
 
-% cd ../../../GitHub/cobratoolbox;
+% cd ../cobratoolbox;
 % initCobraToolbox;
 
 addpath('Functions/');

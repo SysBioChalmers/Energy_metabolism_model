@@ -8,7 +8,7 @@
 %% Different conditions
 
 % Add Violinplot path
-% addpath(genpath('../../../GitHub/Violinplot-Matlab'));
+% addpath(genpath('../Violinplot-Matlab'));
 
 % Yeast dataset 1 (PMID: 28365149)
 

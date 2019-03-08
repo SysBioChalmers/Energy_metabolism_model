@@ -4,7 +4,7 @@
 
 % Related to Fig 4
 
-% cd ../../../GitHub/cobratoolbox;
+% cd ../cobratoolbox;
 % initCobraToolbox;
 
 addpath('Functions/');

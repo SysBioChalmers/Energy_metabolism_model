@@ -2,7 +2,7 @@
 % Related to Fig 5BDF
 % Related to Fig S4B
 
-% cd ../../../GitHub/cobratoolbox;
+% cd ../cobratoolbox;
 % initCobraToolbox;
 
 addpath('Functions/');

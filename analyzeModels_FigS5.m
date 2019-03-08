@@ -2,7 +2,7 @@
 % Change ratio of LY/HY
 % Related to Fig S5
 
-% cd ../../../GitHub/cobratoolbox;
+% cd ../cobratoolbox;
 % initCobraToolbox;
 
 addpath('Functions/');

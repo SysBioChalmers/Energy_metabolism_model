@@ -3,7 +3,7 @@
 % Related to Fig S1
 % The unit of protein cost is g/gCDW/flux.
 
-% cd ../../../GitHub/cobratoolbox;
+% cd ../cobratoolbox;
 % initCobraToolbox;
 
 addpath('Functions/');

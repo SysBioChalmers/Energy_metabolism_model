@@ -3,7 +3,7 @@
 
 % This is for determining biomass formation pathway. 
 
-% cd ../../../GitHub/cobratoolbox;
+% cd ../cobratoolbox;
 % initCobraToolbox;
 
 %% E.coli
