@@ -2,11 +2,6 @@
 % Related to Fig 5BDF
 % Related to Fig S4B
 
-% cd ../cobratoolbox;
-% initCobraToolbox;
-
-addpath('Functions/');
-
 %% Experimental data (PMID: 27229477/25278608)
 
 fluxes_exp = [0.29   0.12   0.22   0.22   0.22   0.22   0.23 % growth rate

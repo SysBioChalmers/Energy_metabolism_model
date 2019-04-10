@@ -4,11 +4,6 @@
 % Related to Fig 3BD
 % Related to Fig S2B
 
-% cd ../cobratoolbox;
-% initCobraToolbox;
-
-addpath('Functions/');
-
 %% Yeast CEN.PK 113-7D
 
 % Chemostat data (DOI: 10.1038/s42255-018-0006-7)

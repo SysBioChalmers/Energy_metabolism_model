@@ -3,9 +3,6 @@
 
 % This is for determining biomass formation pathway. 
 
-% cd ../cobratoolbox;
-% initCobraToolbox;
-
 %% E.coli
 load('Ecoli_model.mat');
 % The model is iML1515.

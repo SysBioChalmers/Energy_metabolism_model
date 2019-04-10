@@ -4,11 +4,6 @@
 % Related to Fig 3AC
 % Related to Fig S2A
 
-% cd ../cobratoolbox;
-% initCobraToolbox;
-
-addpath('Functions/');
-
 %% Ecoli MG1655
 
 % Chemostat data (DOI: 10.1038/s42255-018-0006-7)

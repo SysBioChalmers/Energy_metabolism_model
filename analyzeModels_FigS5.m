@@ -2,11 +2,6 @@
 % Change ratio of LY/HY
 % Related to Fig S5
 
-% cd ../cobratoolbox;
-% initCobraToolbox;
-
-addpath('Functions/');
-
 %% Modify model
 % E.coli
 model = xls2model('Model_ecoli.xlsx');

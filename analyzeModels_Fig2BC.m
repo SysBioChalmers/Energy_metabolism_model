@@ -1,11 +1,6 @@
 % Analyse models
 % Related to Fig 2BC
 
-% cd ../cobratoolbox;
-% initCobraToolbox;
-
-addpath('Functions/');
-
 %% Modify model
 % E.coli
 model = xls2model('Model_ecoli.xlsx');

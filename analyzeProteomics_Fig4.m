@@ -4,11 +4,6 @@
 
 % Related to Fig 4
 
-% cd ../cobratoolbox;
-% initCobraToolbox;
-
-addpath('Functions/');
-
 %% Exp data
 
 [num_yeast, ~, ~] = xlsread('Protein_abundance.xlsx','Yeast');
@@ -29,12 +24,12 @@ ylim([0 0.15]);
 set(gcf,'position',[500 300 300 150]);
 set(gca,'position',[0.2 0.22 0.76 0.71]);
 
-tot_prot = sum(num_yeast(3:120,3:21));
+tot_prot_yeast = sum(num_yeast(3:120,3:21));
 glc_rate = num_yeast(122,3:21);
 figure('Name','yeast_exp_2');
 hold on;
 box on;
-scatter(glc_rate,tot_prot,40,'ko','filled');
+scatter(glc_rate,tot_prot_yeast,40,'ko','filled');
 set(gca,'FontSize',10,'FontName','Helvetica');
 xlabel('Glucose uptake rate (mmol/gCDW/h)','FontSize',12,'FontName','Helvetica');
 ylabel(['Measured protein allocation',char(13,10)','(g/gCDW)'],'FontSize',12,'FontName','Helvetica');
@@ -43,14 +38,14 @@ set(gcf,'position',[500 400 300 150]);
 set(gca,'position',[0.2 0.22 0.76 0.71]);
 
 % Ecoli dataset 1 (PMID: 25712329)
-tot_prot = sum(num_ecoli(3:75,3:24));
+tot_prot_ecoli = sum(num_ecoli(3:75,3:24));
 glc_rate = num_ecoli(77,3:24);
 
 
 figure('Name','ecoli_exp');
 hold on;
 box on;
-scatter(glc_rate,tot_prot,40,'ko','filled');
+scatter(glc_rate,tot_prot_ecoli,40,'ko','filled');
 set(gca,'FontSize',10,'FontName','Helvetica');
 xlabel('Glucose uptake rate (mmol/gCDW/h)','FontSize',12,'FontName','Helvetica');
 ylabel(['Measured protein allocation',char(13,10)','(g/gCDW)'],'FontSize',12,'FontName','Helvetica');
@@ -134,7 +129,7 @@ set(gcf,'position',[0 0 300 150]);
 set(gca,'position',[0.2 0.22 0.76 0.71]);
 
 % Plot saturation
-max_prot = median(res(8,10:20));
+max_prot = median(tot_prot_yeast);
 sat = res(8,1:20) ./ max_prot * 100;
 
 figure('Name','yeast_saturation');
@@ -147,7 +142,7 @@ xlabel('Glucose uptake rate (mmol/gCDW/h)','FontSize',12,'FontName','Helvetica')
 ylabel('Apparent saturation (%)','FontSize',12,'FontName','Helvetica');
 legend({'Chemostat data',...
         'Batch data'},'FontSize',9,'FontName','Helvetica','location','se');
-ylim([0 125]);
+ylim([0 100]);
 set(gcf,'position',[100 400 300 150]);
 set(gca,'position',[0.2 0.22 0.76 0.71]);
 
@@ -227,7 +222,7 @@ set(gca,'position',[0.2 0.22 0.76 0.71]);
 
 
 % Plot saturation
-max_prot = median(res(8,21:35));
+max_prot = median(tot_prot_ecoli);
 sat = res(8,1:35) ./ max_prot * 100;
 
 figure('Name','ecoli_saturation');
@@ -240,7 +235,7 @@ xlabel('Glucose uptake rate (mmol/gCDW/h)','FontSize',12,'FontName','Helvetica')
 ylabel('Apparent saturation (%)','FontSize',12,'FontName','Helvetica');
 legend({'Chemostat data',...
         'Batch data'},'FontSize',9,'FontName','Helvetica','location','se');
-ylim([0 125]);
+ylim([0 110]);
 set(gcf,'position',[200 400 300 150]);
 set(gca,'position',[0.2 0.22 0.76 0.71]);
 

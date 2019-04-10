@@ -3,11 +3,6 @@
 % Related to Fig S1
 % The unit of protein cost is g/gCDW/flux.
 
-% cd ../cobratoolbox;
-% initCobraToolbox;
-
-addpath('Functions/');
-
 %% Modify model
 % E.coli
 model = xls2model('Model_ecoli.xlsx');

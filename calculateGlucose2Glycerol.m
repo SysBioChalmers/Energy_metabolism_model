@@ -3,9 +3,6 @@
 
 % This is for determining fluxes towards glycerol in yeast model. 
 
-% cd ../cobratoolbox;
-% initCobraToolbox;
-
 load('Yeast_model'); %The NGAM reaction has been added.
 
 model_test = changeObjective(model, 'r_1808');

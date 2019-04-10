@@ -4,11 +4,6 @@
 
 % Data from (PMID: 25304508 27135538)
 
-% cd ../cobratoolbox;
-% initCobraToolbox;
-
-addpath('Functions/');
-
 model_ecoli = xls2model('Model_ecoli.xlsx');
 
 prot_cost_info = struct();
