@@ -170,11 +170,11 @@ for i = 1:length(tot_prot_list_ecoli)
     ATP_data = ATP_tmp(:,1:num);
     
     if i == 2
-        plot3(ATP_data(4,:),prot_data,ATP_data(3,:),'k','LineWidth',1.5);
+        plot3(ATP_data(4,:),prot_data,ATP_data(3,:),'k','LineWidth',1);
         hold on;
-        plot3([0,0],[tot_prot,tot_prot],[0,ATP_data(1,1)],'k-.','LineWidth',1.5);
-        plot3([ATP_data(4,end),ATP_data(4,end)],[tot_prot,tot_prot],[0,ATP_data(3,end)],'k-.','LineWidth',1.5);
-        plot3([0,ATP_data(4,end)],[tot_prot,tot_prot],[0,0],'k-.','LineWidth',1.5);
+        plot3([0,0],[tot_prot,tot_prot],[0,ATP_data(1,1)],'k-.','LineWidth',1);
+        plot3([ATP_data(4,end),ATP_data(4,end)],[tot_prot,tot_prot],[0,ATP_data(3,end)],'k-.','LineWidth',1);
+        plot3([0,ATP_data(4,end)],[tot_prot,tot_prot],[0,0],'k-.','LineWidth',1);
     else
         plot3(ATP_data(4,:),prot_data,ATP_data(3,:),'k','LineWidth',0.5);
         hold on;
@@ -186,11 +186,11 @@ for i = 1:length(tot_prot_list_ecoli)
 end
 
 grid on;
-set(gca,'FontSize',10,'FontName','Helvetica');
+set(gca,'FontSize',12,'FontName','Helvetica');
 zlim([0 220]);
-ylabel(['Protein allocation',char(13,10)','(g/gCDW)'],'FontSize',12,'FontName','Helvetica');
-xlabel(['Glucose uptake rate',char(13,10)','(mmol/gCDW/h)'],'FontSize',12,'FontName','Helvetica');
-zlabel(['ATP production rate',char(13,10)','(mmol/gCDW/h)'],'FontSize',12,'FontName','Helvetica');
+ylabel(['Protein allocation',char(13,10)','(g/gCDW)'],'FontSize',14,'FontName','Helvetica');
+xlabel(['Glucose uptake rate',char(13,10)','(mmol/gCDW/h)'],'FontSize',14,'FontName','Helvetica');
+zlabel(['ATP production rate',char(13,10)','(mmol/gCDW/h)'],'FontSize',14,'FontName','Helvetica');
 
 az = -45;
 el = 30;
@@ -270,11 +270,11 @@ for i = 1:length(tot_prot_list_yeast)
     ATP_data = ATP_tmp(:,1:num);
     
     if i == 2
-        plot3(ATP_data(4,:),prot_data,ATP_data(3,:),'k','LineWidth',1.5);
+        plot3(ATP_data(4,:),prot_data,ATP_data(3,:),'k','LineWidth',1);
         hold on;
-        plot3([0,0],[tot_prot,tot_prot],[0,ATP_data(1,1)],'k-.','LineWidth',1.5);
-        plot3([ATP_data(4,end),ATP_data(4,end)],[tot_prot,tot_prot],[0,ATP_data(3,end)],'k-.','LineWidth',1.5);
-        plot3([0,ATP_data(4,end)],[tot_prot,tot_prot],[0,0],'k-.','LineWidth',1.5);
+        plot3([0,0],[tot_prot,tot_prot],[0,ATP_data(1,1)],'k-.','LineWidth',1);
+        plot3([ATP_data(4,end),ATP_data(4,end)],[tot_prot,tot_prot],[0,ATP_data(3,end)],'k-.','LineWidth',1);
+        plot3([0,ATP_data(4,end)],[tot_prot,tot_prot],[0,0],'k-.','LineWidth',1);
     else
         plot3(ATP_data(4,:),prot_data,ATP_data(3,:),'k','LineWidth',0.5);
         hold on;
@@ -286,12 +286,12 @@ for i = 1:length(tot_prot_list_yeast)
 end
 
 grid on;
-set(gca,'FontSize',10,'FontName','Helvetica');
+set(gca,'FontSize',12,'FontName','Helvetica');
 xlim([0 37]);
 zlim([0 80]);
-ylabel(['Protein allocation',char(13,10)','(g/gCDW)'],'FontSize',12,'FontName','Helvetica');
-xlabel(['Glucose uptake rate',char(13,10)','(mmol/gCDW/h)'],'FontSize',12,'FontName','Helvetica');
-zlabel(['ATP production rate',char(13,10)','(mmol/gCDW/h)'],'FontSize',12,'FontName','Helvetica');
+ylabel(['Protein allocation',char(13,10)','(g/gCDW)'],'FontSize',14,'FontName','Helvetica');
+xlabel(['Glucose uptake rate',char(13,10)','(mmol/gCDW/h)'],'FontSize',14,'FontName','Helvetica');
+zlabel(['ATP production rate',char(13,10)','(mmol/gCDW/h)'],'FontSize',14,'FontName','Helvetica');
 
 az = -45;
 el = 30;
@@ -317,15 +317,15 @@ y1_ly = data(2,:);
 y2 = data(5,:);
 
 hold on;
-plot(x,y1_tot,'k','LineWidth',1.5);
+plot(x,y1_tot,'k','LineWidth',1);
 h = fill([x,fliplr(x)],[y1_ly,zeros(1,length(x))],[215,25,28]/256);
 set(h,'edgealpha',0,'facealpha',0.7);
 h = fill([x,fliplr(x)],[y1_tot,fliplr(y1_ly)],[43,131,186]/256);
 set(h,'edgealpha',0,'facealpha',0.7);
 xlim([0 13]);
 ylim([0 150]);
-xlabel(['Glucose uptake rate',char(13,10)','(mmol/gCDW/h)'],'FontSize',12,'FontName','Helvetica');
-ylabel(['ATP production rate',char(13,10)','(mmol/gCDW/h)'],'FontSize',12,'FontName','Helvetica');
+xlabel(['Glucose uptake rate',char(13,10)','(mmol/gCDW/h)'],'FontSize',14,'FontName','Helvetica');
+ylabel(['ATP production rate',char(13,10)','(mmol/gCDW/h)'],'FontSize',14,'FontName','Helvetica');
 legend({'Total ATP';'ATP from Low-yield pathway';'ATP from High-yield pathway'},'FontSize',8,'FontName','Helvetica','location','ne');
 
 set(gcf,'position',[500 200 180 130]);
@@ -333,8 +333,8 @@ set(gca,'position',[0.27 0.33 0.7 0.63]);
 
 figure('Name','ecoli_2d_prot');
 hold on;
-plot(x,y2,'LineWidth',2,'Color',[197,27,138]/255);
-plot(x,0.1*ones(1,length(x)),':','LineWidth',2,'Color',[197,27,138]/255);
+plot(x,y2,'LineWidth',1,'Color',[197,27,138]/255);
+plot(x,0.1*ones(1,length(x)),':','LineWidth',1,'Color',[197,27,138]/255);
 ylim([0 0.1]);
 set(gca,'ytick',0:0.1:0.1);
 xlim([0 13]);
@@ -356,15 +356,15 @@ y1_ly = data(2,:);
 y2 = data(5,:);
 
 hold on;
-plot(x,y1_tot,'k','LineWidth',1.5);
+plot(x,y1_tot,'k','LineWidth',1);
 h = fill([x,fliplr(x)],[y1_ly,zeros(1,length(x))],[215,25,28]/256);
 set(h,'edgealpha',0,'facealpha',0.7);
 h = fill([x,fliplr(x)],[y1_tot,fliplr(y1_ly)],[43,131,186]/256);
 set(h,'edgealpha',0,'facealpha',0.7);
 xlim([0 25]);
 ylim([0 50]);
-xlabel(['Glucose uptake rate',char(13,10)','(mmol/gCDW/h)'],'FontSize',12,'FontName','Helvetica');
-ylabel(['ATP production rate',char(13,10)','(mmol/gCDW/h)'],'FontSize',12,'FontName','Helvetica');
+xlabel(['Glucose uptake rate',char(13,10)','(mmol/gCDW/h)'],'FontSize',14,'FontName','Helvetica');
+ylabel(['ATP production rate',char(13,10)','(mmol/gCDW/h)'],'FontSize',14,'FontName','Helvetica');
 legend({'Total ATP';'ATP from Low-yield pathway';'ATP from High-yield pathway'},'FontSize',8,'FontName','Helvetica','location','ne');
 
 set(gcf,'position',[700 200 180 130]);
@@ -372,8 +372,8 @@ set(gca,'position',[0.27 0.33 0.7 0.63]);
 
 figure('Name','yeast_2d_prot');
 hold on;
-plot(x,y2,'LineWidth',2,'Color',[197,27,138]/255);
-plot(x,0.1*ones(1,length(x)),':','LineWidth',2,'Color',[197,27,138]/255);
+plot(x,y2,'LineWidth',1,'Color',[197,27,138]/255);
+plot(x,0.1*ones(1,length(x)),':','LineWidth',1,'Color',[197,27,138]/255);
 ylim([0 0.1]);
 set(gca,'ytick',0:0.1:0.1);
 xlim([0 25]);
