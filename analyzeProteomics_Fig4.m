@@ -17,11 +17,12 @@ figure('Name','yeast_exp_1');
 hold on;
 box on;
 scatter(glc_rate,tot_prot,40,'ko','filled');
-set(gca,'FontSize',10,'FontName','Helvetica');
-xlabel('Glucose uptake rate (mmol/gCDW/h)','FontSize',12,'FontName','Helvetica');
-ylabel(['Measured protein allocation',char(13,10)','(g/gCDW)'],'FontSize',12,'FontName','Helvetica');
+set(gca,'FontSize',12,'FontName','Helvetica');
+xlabel('Glucose uptake rate (mmol/gCDW/h)','FontSize',14,'FontName','Helvetica');
+ylabel(['Measured protein allocation',char(13,10)','(g/gCDW)'],'FontSize',14,'FontName','Helvetica');
+xlim([0 8]);
 ylim([0 0.15]);
-set(gcf,'position',[500 300 300 150]);
+set(gcf,'position',[500 300 240 150]);
 set(gca,'position',[0.2 0.22 0.76 0.71]);
 
 tot_prot_yeast = sum(num_yeast(3:120,3:21));
@@ -30,11 +31,12 @@ figure('Name','yeast_exp_2');
 hold on;
 box on;
 scatter(glc_rate,tot_prot_yeast,40,'ko','filled');
-set(gca,'FontSize',10,'FontName','Helvetica');
-xlabel('Glucose uptake rate (mmol/gCDW/h)','FontSize',12,'FontName','Helvetica');
-ylabel(['Measured protein allocation',char(13,10)','(g/gCDW)'],'FontSize',12,'FontName','Helvetica');
+set(gca,'FontSize',12,'FontName','Helvetica');
+xlabel('Glucose uptake rate (mmol/gCDW/h)','FontSize',14,'FontName','Helvetica');
+ylabel(['Measured protein allocation',char(13,10)','(g/gCDW)'],'FontSize',14,'FontName','Helvetica');
+xlim([0 8]);
 ylim([0 0.15]);
-set(gcf,'position',[500 400 300 150]);
+set(gcf,'position',[500 400 240 150]);
 set(gca,'position',[0.2 0.22 0.76 0.71]);
 
 % Ecoli dataset 1 (PMID: 25712329)
@@ -46,11 +48,12 @@ figure('Name','ecoli_exp');
 hold on;
 box on;
 scatter(glc_rate,tot_prot_ecoli,40,'ko','filled');
-set(gca,'FontSize',10,'FontName','Helvetica');
-xlabel('Glucose uptake rate (mmol/gCDW/h)','FontSize',12,'FontName','Helvetica');
-ylabel(['Measured protein allocation',char(13,10)','(g/gCDW)'],'FontSize',12,'FontName','Helvetica');
+set(gca,'FontSize',12,'FontName','Helvetica');
+xlabel('Glucose uptake rate (mmol/gCDW/h)','FontSize',14,'FontName','Helvetica');
+ylabel(['Measured protein allocation',char(13,10)','(g/gCDW)'],'FontSize',14,'FontName','Helvetica');
+xlim([1 7]);
 ylim([0 0.15]);
-set(gcf,'position',[500 500 300 150]);
+set(gcf,'position',[500 500 240 150]);
 set(gca,'position',[0.2 0.22 0.76 0.71]);
 
 
@@ -114,18 +117,18 @@ for i = 1:length(exp_data)
     end
 end
 
-figure('Name','ecoli_estimated_protein');
+figure('Name','yeast_estimated_protein');
 hold on;
 box on;
-plot(res(7,1:17),res(8,1:17),'o','LineWidth',1.5,'Color','k','MarkerSize',6);
-plot(res(7,18:20),res(8,18:20),'^','LineWidth',1.5,'Color','k','MarkerSize',7);
-set(gca,'FontSize',10,'FontName','Helvetica');
-xlabel('Glucose uptake rate (mmol/gCDW/h)','FontSize',12,'FontName','Helvetica');
-ylabel(['Minimal protein allocation',char(13,10)','(g/gCDW)'],'FontSize',12,'FontName','Helvetica');
+plot(res(7,1:17),res(8,1:17),'o','LineWidth',0.75,'Color','k','MarkerSize',8);
+plot(res(7,18:20),res(8,18:20),'^','LineWidth',0.75,'Color','k','MarkerSize',10);
+set(gca,'FontSize',12,'FontName','Helvetica');
+xlabel('Glucose uptake rate (mmol/gCDW/h)','FontSize',14,'FontName','Helvetica');
+ylabel(['Minimal protein allocation',char(13,10)','(g/gCDW)'],'FontSize',14,'FontName','Helvetica');
 legend({'Chemostat data',...
-        'Batch data'},'FontSize',9,'FontName','Helvetica','location','se');
+        'Batch data'},'FontSize',12,'FontName','Helvetica','location','se');
 
-set(gcf,'position',[0 0 300 150]);
+set(gcf,'position',[0 0 240 150]);
 set(gca,'position',[0.2 0.22 0.76 0.71]);
 
 % Plot saturation
@@ -135,17 +138,16 @@ sat = res(8,1:20) ./ max_prot * 100;
 figure('Name','yeast_saturation');
 hold on;
 box on;
-plot(res(7,1:17),sat(1:17),'o','LineWidth',1.5,'Color','k','MarkerSize',6);
-plot(res(7,18:20),sat(18:20),'^','LineWidth',1.5,'Color','k','MarkerSize',7);
-set(gca,'FontSize',10,'FontName','Helvetica');
-xlabel('Glucose uptake rate (mmol/gCDW/h)','FontSize',12,'FontName','Helvetica');
-ylabel('Apparent saturation (%)','FontSize',12,'FontName','Helvetica');
+plot(res(7,1:17),sat(1:17),'o','LineWidth',0.75,'Color','k','MarkerSize',8);
+plot(res(7,18:20),sat(18:20),'^','LineWidth',0.75,'Color','k','MarkerSize',10);
+set(gca,'FontSize',12,'FontName','Helvetica');
+xlabel('Glucose uptake rate (mmol/gCDW/h)','FontSize',14,'FontName','Helvetica');
+ylabel('Apparent saturation (%)','FontSize',14,'FontName','Helvetica');
 legend({'Chemostat data',...
-        'Batch data'},'FontSize',9,'FontName','Helvetica','location','se');
+        'Batch data'},'FontSize',12,'FontName','Helvetica','location','se');
 ylim([0 100]);
-set(gcf,'position',[100 400 300 150]);
+set(gcf,'position',[100 400 240 150]);
 set(gca,'position',[0.2 0.22 0.76 0.71]);
-
 
 %% Ecoli MG1655
 
@@ -209,15 +211,15 @@ end
 figure('Name','ecoli_estimated_protein');
 hold on;
 box on;
-plot(res(7,1:31),res(8,1:31),'o','LineWidth',1.5,'Color','k','MarkerSize',6);
-plot(res(7,32:35),res(8,32:35),'^','LineWidth',1.5,'Color','k','MarkerSize',7);
-set(gca,'FontSize',10,'FontName','Helvetica');
-xlabel('Glucose uptake rate (mmol/gCDW/h)','FontSize',12,'FontName','Helvetica');
-ylabel(['Minimal protein allocation',char(13,10)','(g/gCDW)'],'FontSize',12,'FontName','Helvetica');
+plot(res(7,1:31),res(8,1:31),'o','LineWidth',0.75,'Color','k','MarkerSize',8);
+plot(res(7,32:35),res(8,32:35),'^','LineWidth',0.75,'Color','k','MarkerSize',10);
+set(gca,'FontSize',12,'FontName','Helvetica');
+xlabel('Glucose uptake rate (mmol/gCDW/h)','FontSize',14,'FontName','Helvetica');
+ylabel(['Minimal protein allocation',char(13,10)','(g/gCDW)'],'FontSize',14,'FontName','Helvetica');
 legend({'Chemostat data',...
-        'Batch data'},'FontSize',9,'FontName','Helvetica','location','se');
+        'Batch data'},'FontSize',12,'FontName','Helvetica','location','se');
 ylim([0 0.12]);
-set(gcf,'position',[0 400 300 150]);
+set(gcf,'position',[0 400 240 150]);
 set(gca,'position',[0.2 0.22 0.76 0.71]);
 
 
@@ -228,14 +230,14 @@ sat = res(8,1:35) ./ max_prot * 100;
 figure('Name','ecoli_saturation');
 hold on;
 box on;
-plot(res(7,1:31),sat(1:31),'o','LineWidth',1.5,'Color','k','MarkerSize',6);
-plot(res(7,32:35),sat(32:35),'^','LineWidth',1.5,'Color','k','MarkerSize',7);
-set(gca,'FontSize',10,'FontName','Helvetica');
-xlabel('Glucose uptake rate (mmol/gCDW/h)','FontSize',12,'FontName','Helvetica');
-ylabel('Apparent saturation (%)','FontSize',12,'FontName','Helvetica');
+plot(res(7,1:31),sat(1:31),'o','LineWidth',0.75,'Color','k','MarkerSize',8);
+plot(res(7,32:35),sat(32:35),'^','LineWidth',0.75,'Color','k','MarkerSize',10);
+set(gca,'FontSize',12,'FontName','Helvetica');
+xlabel('Glucose uptake rate (mmol/gCDW/h)','FontSize',14,'FontName','Helvetica');
+ylabel('Apparent saturation (%)','FontSize',14,'FontName','Helvetica');
 legend({'Chemostat data',...
-        'Batch data'},'FontSize',9,'FontName','Helvetica','location','se');
+        'Batch data'},'FontSize',12,'FontName','Helvetica','location','se');
 ylim([0 110]);
-set(gcf,'position',[200 400 300 150]);
+set(gcf,'position',[200 400 240 150]);
 set(gca,'position',[0.2 0.22 0.76 0.71]);
 

@@ -70,17 +70,19 @@ clear eth glc i min_prot_list mu sol;
 figure('Name','yeast_1');
 hold on;
 box on;
-plot(chm_data(2,:),chm_data(3,:),'o','LineWidth',1.5,'Color','k','MarkerSize',6);
-plot(bch_data(2,:),bch_data(3,:),'^','LineWidth',1.5,'Color','k','MarkerSize',7);
-plot(fluxes_sim_yeast(2,:),fluxes_sim_yeast(3,:),'-','LineWidth',1.5,'Color','k');
+plot(chm_data(2,:),chm_data(3,:),'o','LineWidth',0.75,'Color','k','MarkerSize',8);
+plot(bch_data(2,:),bch_data(3,:),'^','LineWidth',0.75,'Color','k','MarkerSize',10);
+plot(fluxes_sim_yeast(2,:),fluxes_sim_yeast(3,:),'-','LineWidth',0.75,'Color','k');
 
-set(gca,'FontSize',10,'FontName','Helvetica');
-xlabel('Glucose uptake (mmol/gCDW/h)','FontSize',12,'FontName','Helvetica');
-ylabel(['Ethanol production',char(13,10)','(mmol/gCDW/h)'],'FontSize',12,'FontName','Helvetica');
+xlim([0 25]);
+
+set(gca,'FontSize',12,'FontName','Helvetica');
+xlabel('Glucose uptake (mmol/gCDW/h)','FontSize',14,'FontName','Helvetica');
+ylabel(['Ethanol production',char(13,10)','(mmol/gCDW/h)'],'FontSize',14,'FontName','Helvetica');
 
 legend({'Chemostat data',...
         'Batch data',...
-        'Predicted data'},'FontSize',9,'FontName','Helvetica','location','nw');
+        'Predicted data'},'FontSize',12,'FontName','Helvetica','location','nw');
 
 
 set(gcf,'position',[300 400 240 185]);
@@ -286,19 +288,21 @@ clear f_hy_org f_ly_org;
 figure('Name','yeast_chemostat');
 hold on;
 box on;
-plot(fluxes_exp_yeast(1,:),fluxes_exp_yeast(2,:),'o','LineWidth',1.5,'Color',[55,126,184]/255,'MarkerSize',6);
-plot(fluxes_exp_yeast(1,:),fluxes_exp_yeast(3,:),'o','LineWidth',1.5,'Color',[255,127,0]/255,'MarkerSize',6);
-plot(fluxes_exp_yeast(1,:),fluxes_exp_yeast(4,:),'o','LineWidth',1.5,'Color',[77,175,74]/255,'MarkerSize',6);
-plot(fluxes_sim_yeast(1,:),fluxes_sim_yeast(2,:),'-','LineWidth',1.5,'Color',[55,126,184]/255);
-plot(fluxes_sim_yeast(1,:),fluxes_sim_yeast(3,:),'-','LineWidth',1.5,'Color',[255,127,0]/255);
-plot(fluxes_sim_yeast(1,:),fluxes_sim_yeast(4,:),'-','LineWidth',1.5,'Color',[77,175,74]/255);
+plot(fluxes_exp_yeast(1,:),fluxes_exp_yeast(2,:),'o','LineWidth',0.75,'Color',[55,126,184]/255,'MarkerSize',8);
+plot(fluxes_exp_yeast(1,:),fluxes_exp_yeast(3,:),'o','LineWidth',0.75,'Color',[255,127,0]/255,'MarkerSize',8);
+plot(fluxes_exp_yeast(1,:),fluxes_exp_yeast(4,:),'o','LineWidth',0.75,'Color',[77,175,74]/255,'MarkerSize',8);
+plot(fluxes_sim_yeast(1,:),fluxes_sim_yeast(2,:),'-','LineWidth',0.75,'Color',[55,126,184]/255);
+plot(fluxes_sim_yeast(1,:),fluxes_sim_yeast(3,:),'-','LineWidth',0.75,'Color',[255,127,0]/255);
+plot(fluxes_sim_yeast(1,:),fluxes_sim_yeast(4,:),'-','LineWidth',0.75,'Color',[77,175,74]/255);
 
-set(gca,'FontSize',10,'FontName','Helvetica');
-xlabel('Growth rate (/h)','FontSize',12,'FontName','Helvetica');
-ylabel('Flux (mmol/gCDW/h)','FontSize',12,'FontName','Helvetica');
+xlim([0 0.5]);
+
+set(gca,'FontSize',12,'FontName','Helvetica');
+xlabel('Growth rate (/h)','FontSize',14,'FontName','Helvetica');
+ylabel('Flux (mmol/gCDW/h)','FontSize',14,'FontName','Helvetica');
 legend({'Glucose uptake',...
         'Ethanol production'...
-        'O2 uptake',},'FontSize',9,'FontName','Helvetica','location','nw');
+        'O2 uptake',},'FontSize',12,'FontName','Helvetica','location','nw');
 
 set(gcf,'position',[0 400 240 185]);
 set(gca,'position',[0.2 0.18 0.76 0.8]);
