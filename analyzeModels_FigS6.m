@@ -1,6 +1,6 @@
 % Analyse models
 % Change ratio of LY/HY
-% Related to Fig S5
+% Related to Fig S6
 
 %% Modify model
 % E.coli
