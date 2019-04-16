@@ -14,11 +14,18 @@ kcat_yeast = num(:,2);
 pc_yeast = num(:,3);
 clear num;
 
-[num, txt, ~] = xlsread('Comparison.xlsx','comparison');
+[num, txt, ~] = xlsread('Comparison.xlsx','comparison_rxn');
 abs_ecoli = num(:,1);
 abs_yeast = num(:,2);
 fc = num(:,3);
 rxnID = txt(2:end,1);
+clear num txt;
+
+[num, txt, ~] = xlsread('Comparison.xlsx','comparison_pathway');
+pw_ecoli = num(:,1);
+pw_yeast = num(:,2);
+fcpw = num(:,3);
+pwID = txt(2:end,1);
 clear num txt;
 
 %% Figures
