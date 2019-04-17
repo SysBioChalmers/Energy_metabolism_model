@@ -86,21 +86,21 @@ b(2).FaceAlpha = 0.6;
 b(3).FaceColor = [146,39,143]/256;
 b(3).FaceAlpha = 0.6;
 ylim([0 1]);
-set(gca,'FontSize',10,'FontName','Helvetica');
+set(gca,'FontSize',12,'FontName','Helvetica');
 set(gca,'ycolor','k');
-ylabel('Fraction in total glucose fluxes','FontSize',12,'FontName','Helvetica','Color','k');
+ylabel('Fraction in total glucose fluxes','FontSize',14,'FontName','Helvetica','Color','k');
 
 yyaxis right;
-plot(c,fluxes_exp(1,:),'ko','LineWidth',1,'MarkerSize',6);
+plot(c,fluxes_exp(1,:),'ko','LineWidth',1,'MarkerSize',5);
 set(gca,'ycolor','k');
 ylim([0.1 0.3]);
 
-ylabel('Growth rate (/h)','FontSize',12,'FontName','Helvetica','Color','k');
+ylabel('Growth rate (/h)','FontSize',14,'FontName','Helvetica','Color','k');
 
-legend({'High-yield flux',...
-        'Low-yield flux',...
-        'Biomass flux',...
-        'Growth rate'},'FontSize',9,'FontName','Helvetica','location','nw');
+% legend({'High-yield flux',...
+%         'Low-yield flux',...
+%         'Biomass flux',...
+%         'Growth rate'},'FontSize',9,'FontName','Helvetica','location','nw');
 
 set(gcf,'position',[0 0 250 220]);
 set(gca,'position',[0.15 0.13 0.65 0.85]);

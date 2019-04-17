@@ -132,7 +132,7 @@ set(gcf,'position',[0 0 240 150]);
 set(gca,'position',[0.2 0.22 0.76 0.71]);
 
 % Plot saturation
-max_prot = median(tot_prot_yeast);
+max_prot = median(tot_prot);
 sat = res(8,1:20) ./ max_prot * 100;
 
 figure('Name','yeast_saturation');
