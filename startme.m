@@ -3,5 +3,5 @@
 cd ../cobratoolbox;
 initCobraToolbox;
 
+addpath(genpath('../Energy_metabolism_model/')); %add to path
 cd ../Energy_metabolism_model;
-addpath('Functions/'); %add to path
