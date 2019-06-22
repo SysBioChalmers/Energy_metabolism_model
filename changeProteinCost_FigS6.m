@@ -3,7 +3,7 @@
 
 % Related to Fig 6
 
-c = 0.5; % change the protein cost to 50% of the original value
+c = 2; % change the protein cost to 50% of the original value
 
 %% Ecoli
 
@@ -83,19 +83,15 @@ idx1 = ~ismember(id,remove_id_ecoli);
 id = id(idx1);
 value = value(idx1);
 value = round(value,2);
-[value, idx2] = sort(value,'descend');
-idx3 = value == 1;
+[value, idx2] = sort(value,'ascend');
 id = id(idx2);
-id_tmp = id;
-id_tmp(idx3) = {''};
 
 subplot(2,1,1);
 h1 = bar(1:length(id),value,'FaceColor',color_ecoli,'FaceAlpha',0.3,'EdgeColor',color_ecoli,'LineWidth',0.5);
 set(gca,'XTick',1:1:length(id));
-set(gca,'XTickLabel',id_tmp);
+set(gca,'XTickLabel',id);
 set(gca,'FontSize',10,'FontName','Helvetica');
-ylim([0.9 1.2]);
-set(gca,'YTickLabel',0.9:0.1:1.2);
+ylim([0.6 1.05]);
 ylabel('Change in growth','FontSize',12,'FontName','Helvetica','Color','k');
 xtickangle(90);
 box off;
@@ -107,18 +103,15 @@ idx1 = ~ismember(id,remove_id_yeast);
 id = id(idx1);
 value = value(idx1);
 value = round(value,2);
-[value, idx2] = sort(value,'descend');
-idx3 = value == 1;
+[value, idx2] = sort(value,'ascend');
 id = id(idx2);
-id_tmp = id;
-id_tmp(idx3) = {''};
 
 subplot(2,1,2);
 h2 = bar(1:length(id),value,'FaceColor',color_yeast,'FaceAlpha',0.3,'EdgeColor',color_yeast,'LineWidth',0.5);
 set(gca,'XTick',1:1:length(id));
-set(gca,'XTickLabel',id_tmp);
+set(gca,'XTickLabel',id);
 set(gca,'FontSize',10,'FontName','Helvetica');
-ylim([0.9 1.4]);
+ylim([0.6 1.05]);
 ylabel('Change in growth','FontSize',12,'FontName','Helvetica','Color','k');
 xtickangle(90);
 box off;

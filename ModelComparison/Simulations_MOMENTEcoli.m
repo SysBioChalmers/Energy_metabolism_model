@@ -91,3 +91,5 @@ end
 % 	fluxes_sim_ecoli(i,:) = [sol.fluxes(strcmp(model_tmp.rxns,'BIOMASS_Ec_iML1515_core_75p37M')),glc,ac,(ac*2)/(glc*6)];
 % end
 
+value = fluxes_sim_ecoli(:,1)/fluxes_ref_ecoli(1);
+value = round(value,2);

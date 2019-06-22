@@ -42,3 +42,4 @@ for i = 1:length(rxn_list)
 end
 
 rel_values = mu_list./mu_ref;
+rel_values = round(rel_values,2);
